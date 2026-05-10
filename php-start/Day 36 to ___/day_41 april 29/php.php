@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+
+    <style>
+        .container {
+            background-color: aqua;
+            width: 60vw;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 20px;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+
+        input , select{
+            padding: 10px;
+            border-radius: 10px;
+            color: green;
+            font-size: 20px;
+            width: 300px;
+            text-align: center;
+            outline: none;
+            border: none;
+        }
+
+        label {
+            color: green;
+            font-size: 20px;
+            margin-right: 20px;
+            /* background-color: red; */
+        }
+
+        h1 {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>login form </h1>
+<form action="" method="POST">
+
+        
+        <div >
+            <label for="">Name</label>
+            <input name = 'name' type="text" placeholder="your name ">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input name = 'email' type="text" placeholder="your email ">
+        </div>
+        <div  >
+            <label for="">Age</label>
+            <input name = 'age' type="number" placeholder="your age ">
+        </div>
+        <div>
+            <label for="">City</label>
+            <select name = 'city' name="" id="">
+                <option value="">your city </option>
+                <option value="">bwp</option>
+                <option value="">multan</option>
+                <option value="">karachi</option>
+            </select>
+        </div>
+         <div >
+            <label for="">Cource ID</label>
+            <input name = 'cource_id' type="text" placeholder="your ID ">
+        </div>
+</form>
+
+
+    </div>
+</body>
+
+</html>
