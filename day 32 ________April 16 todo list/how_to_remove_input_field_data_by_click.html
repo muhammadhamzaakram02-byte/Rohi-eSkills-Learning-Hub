@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>button </button>
+    <input id="input" type="text" placeholder="jnjdfddfdfdf">
+    <script>
+        let btn = document.getElementsByTagName('button')[0]
+        btn.addEventListener('click', function () {
+            btn.style.backgroundColor = 'red'
+            document.getElementsByTagName('input')[0].value = '';
+
+        })
+
+    </script>
+</body>
+
+</html>

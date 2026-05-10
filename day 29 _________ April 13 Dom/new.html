@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+
+<body>
+    <div class="box">1</div>
+    <div class="box">1</div>
+    <div class="box">1</div>
+    <div class="box">1</div>
+    <div class="box">1</div>
+    <script>
+        document.querySelectorAll('.box').forEach(e => {
+            e.style.backgroundColor = 'red'
+            e.style.width = '200px'
+            e.style.height = '150px'
+            e.style.border = '22px solid yellow '
+            e.style.margin = '10px '
+            e.textContent = 'box __________'
+            console.log(e)
+
+        })
+    </script>
+</body>
+
+</html>

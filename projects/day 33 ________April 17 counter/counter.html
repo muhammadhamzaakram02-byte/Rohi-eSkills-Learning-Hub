@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_box {
+            width: 60vw;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            background-color: aqua;
+            padding: 30px;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .box {
+            width: 20%;
+            height: 30%;
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: bolder;
+            /* color: brown; */
+        }
+
+        .box2 {
+            background-color: rgb(230, 229, 233);
+            font-size: 40px;
+            /* color: red; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_box">
+        <div id="box1" class=" box box1">+</div>
+        <div id="box2" class=" box box2"></div>
+        <div id="box3" class=" box box3">-</div>
+    </div>
+    <script>
+        let box1, box2, box3;
+        box1 = document.getElementById('box1')
+        box2 = document.getElementById('box2')
+        box3 = document.getElementById('box3')
+        let x = 0;
+        box1.addEventListener('click', function () {
+            x++;
+            box2.textContent = x
+            if (x <= 0) {
+                box2.style.color = 'red';
+            } else {
+                box2.style.color = 'green';
+            }
+        })
+        // box1.addEventListener('click', function () {
+            // x += 1.5;
+            // box2.textContent = Math.floor(x)
+            // box2.textContent = x
+        // })
+
+        box3.addEventListener('click', function () {
+            x--;
+            box2.textContent = x ;
+            if (x <= 0) {
+                box2.style.color = 'red';
+            } else {
+                box2.style.color = 'green';
+            }
+
+        })
+    </script>
+</body>
+
+</html>

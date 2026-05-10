@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .box {
+            width: 500px;
+            height: 450px;
+            background-color: aqua;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+
+            /* justify-content: center; */
+        }
+
+        .bar {
+            background-color: wheat;
+            width: 80%;
+            border-radius: 20px;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            /* box-sizing: border-box; */
+            /* text-align: center; */
+            /* padding-top: 12px; */
+            /* flex-direction: column; */
+        }
+
+        input {
+            border: none;
+            width: 250px;
+            font-size: 15px;
+            height: 50px;
+            background-color: wheat;
+            color: blue;
+
+            /* background-color: black; */
+        }
+
+        input:focus {
+            border-style: none;
+            border: none;
+            outline: none;
+            color: green;
+            background-color: wheat;
+        }
+
+        .add {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(240, 6, 146);
+            display: inline-block;
+            font-size: 50px;
+            font-weight: bolder;
+            
+            /* width: 80px; */
+            /* height: 30px; */
+            /* background-color: blue; */
+        }
+
+        .new_1 {
+            background-color: rgb(188, 188, 225);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 20px;
+            margin: 20px;
+            width: 340px;
+            height: 50px;
+
+            /* background-color: black; */
+            /* padding: 20px; */
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column-reverse;
+            color: red;
+
+        }
+
+        .new_2 {
+            width: 70%;
+            overflow: hidden;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="box">
+        <div class="bar">
+            <input type="text" id="input" placeholder="write any thing ">
+            <div id="add" class="add"> + </div>
+        </div>
+        <div id="container" class="container"></div>
+    </div>
+
+    <script>
+        let container = document.getElementById('container')
+        let add = document.getElementById('add')
+        add.addEventListener('click', function () {
+            create_new_box()
+         
+
+        })
+        function create_new_box() {
+            let input = document.getElementById('input').value ;
+            // if(input == ''){
+            //     alert('write any thing ')
+            //     return ;
+            // }
+            let new_1 = document.createElement('div')
+            let new_2 = document.createElement('div')
+            new_1.classList.add('new_1')
+            new_2.textContent = input
+            new_2.classList.add('new_2')
+            new_1.appendChild(new_2)
+            container.appendChild(new_1)
+            // let input1 = document.getElementById('input')
+            let delete1 = document.createElement('span')
+            delete1.textContent = 'DELEATE'
+            new_1.appendChild(delete1)
+            document.getElementsByTagName('input')[0].value = ''
+
+
+            delete1.addEventListener('click', function () {
+                // delete1.remove() 
+                new_1.remove()
+            })
+        }
+    </script>
+</body>
+
+</html>

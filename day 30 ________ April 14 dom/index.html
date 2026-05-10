@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 10px solid yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        let admin = 'admin'
+        // let admin = 'user'
+        // let admin = 'other'
+
+        let box = document.querySelector('.box');
+        if (admin == 'admin') {
+            box.style.backgroundColor = 'red'
+            box.textContent = 'Admin'
+            // box.style.fontSize = '50px'
+        } else if (admin == 'user') {
+            document.querySelector('.box').style.backgroundColor = 'green'
+            box.textContent = 'User'
+            // box.style.fontSize = '50px'
+
+
+        } else {
+            document.querySelector('.box').style.backgroundColor = 'blue'
+
+        }
+    </script>
+</body>
+
+</html>

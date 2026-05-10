@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Journey - ShopEase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ── CSS CUSTOM PROPERTIES ── */
+    :root {
+      --blue:   #4F46E5;
+      --violet: #7C3AED;
+      --soft-violet: #EDE9FE;
+      --soft-blue:   #EEF2FF;
+      --line-color: #C4B5FD;
+      --card-shadow: 0 4px 24px rgba(79,70,229,.10);
+      --card-hover:  0 10px 40px rgba(79,70,229,.18);
+      --text-dark: #1E1B4B;
+      --text-mid:  #4B5563;
+      --badge-radius: 20px;
+    }
+
+    /* ── SECTION WRAPPER ── */
+    .journey-section {
+      background: linear-gradient(160deg, #F5F3FF 0%, #EEF2FF 50%, #F8FAFF 100%);
+      padding: 80px 20px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle background blobs */
+    .journey-section::before,
+    .journey-section::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .35;
+      pointer-events: none;
+    }
+    .journey-section::before {
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, #C4B5FD, transparent 70%);
+      top: -80px; left: -120px;
+    }
+    .journey-section::after {
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, #A5B4FC, transparent 70%);
+      bottom: -60px; right: -80px;
+    }
+
+    /* ── HEADER ── */
+    .journey-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--blue);
+      letter-spacing: -.5px;
+    }
+    .journey-header p {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-mid);
+      font-size: 1.05rem;
+    }
+
+    /* ── TIMELINE CONTAINER ── */
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 56px auto 0;
+    }
+
+    
+
+    /* ── TIMELINE ITEM ── */
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      margin-bottom: 64px;
+      position: relative;
+      animation: fadeUp .6s ease both;
+    }
+    .timeline-item:nth-child(1) { animation-delay: .1s; }
+    .timeline-item:nth-child(2) { animation-delay: .25s; }
+    .timeline-item:nth-child(3) { animation-delay: .4s; }
+    .timeline-item:nth-child(4) { animation-delay: .55s; }
+
+    /* left-side items */
+    .timeline-item.left  { flex-direction: row; }
+    /* right-side items */
+    .timeline-item.right { flex-direction: row-reverse; }
+
+    /* ── CARD ── */
+    .tl-card {
+      width: calc(50% - 40px);
+      background: #fff;
+      border-radius: 18px;
+      padding: 26px 28px 24px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      transition: box-shadow .3s ease, transform .3s ease;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .tl-card:hover {
+      box-shadow: var(--card-hover);
+      transform: translateY(-4px);
+    }
+
+    /* arrow pointer toward the line */
+    .left  .tl-card::after {
+      content: '';
+      position: absolute;
+      right: -10px; top: 28px;
+      border: 10px solid transparent;
+      border-left-color: #fff;
+      border-right: 0;
+    }
+    .right .tl-card::after {
+      content: '';
+      position: absolute;
+      left: -10px; top: 28px;
+      border: 10px solid transparent;
+      border-right-color: #fff;
+      border-left: 0;
+    }
+
+    /* year badge on card */
+    .year-badge {
+      display: inline-block;
+      background: var(--soft-violet);
+      color: var(--violet);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .6px;
+      padding: 3px 12px;
+      border-radius: var(--badge-radius);
+      margin-bottom: 10px;
+    }
+
+    .tl-card h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      margin: 0 0 8px;
+    }
+    .tl-card p {
+      font-size: .92rem;
+      line-height: 1.6;
+      color: var(--text-mid);
+      margin: 0;
+    }
+
+    /* right-aligned text inside left cards */
+    .left .tl-card { text-align: right; }
+    .right .tl-card { text-align: left; }
+
+    /* ── NODE (circle with number) ── */
+    .tl-node {
+      width: 80px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 22px;
+    }
+    .tl-circle {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(79,70,229,.38);
+      position: relative;
+      z-index: 2;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .timeline-item:hover .tl-circle {
+      transform: scale(1.12);
+      box-shadow: 0 6px 22px rgba(124,58,237,.45);
+    }
+
+    /* ── ANIMATION ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 641px) {
+/* central vertical line */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--blue), var(--violet), var(--line-color));
+      border-radius: 2px;
+    }
+      
+    }
+    @media (max-width: 640px) {
+      .timeline::before {
+
+         left: 24px; 
+      }
+
+      .timeline-item.left { flex-direction: column; align-items: center;}
+      .timeline-item.right { flex-direction: column-reverse; align-items: center; gap: 30px;}
+
+      .tl-node { width: 48px; padding-top: 18px; }
+      .tl-circle { width: 38px; height: 38px; font-size: .85rem; }
+
+      .tl-card {
+        width: calc(100% - 68px);
+        text-align: left !important;
+      }
+      .left  .tl-card::after,
+      .right .tl-card::after {
+        left: -9px; right: auto;
+        border-right-color: #fff;
+        border-left: 0;
+        top: 22px;
+      }
+    }
+  </style>
+</head>
+<body >
+  
+  
+  <!-- ═══════════════ OUR JOURNEY SECTION ═══════════════ -->
+  <journey-section class="bg-gray-50" >
+  <section class="journey-section">
+
+    <!-- Header -->
+    <div class="journey-header text-center mb-2">
+      <h2>Our Journey</h2>
+      <p class="mt-2">Key milestones that shaped who we are today</p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+
+      <!-- Item 1 – LEFT -->
+      <div class="timeline-item left">
+        <div class="tl-card">
+          <span class="year-badge">2020</span>
+          <h3>The Beginning</h3>
+          <p>ShopEase was founded with a vision to make online shopping simple and enjoyable.</p>
+        </div>
+        <div class="tl-node">
+          <div class="tl-circle">1</div>
+        </div>
+        <div style="width:calc(50% - 40px)"></div>
+      </div>
+
+      <!-- Item 2 – RIGHT -->
+      <div class="timeline-item right">
+        <div class="tl-card">
+          <span class="year-badge">2022</span>
+          <h3>10,000 Customers</h3>
+          <p>Reached the milestone of 10,000 happy customers and expanded our product range.</p>
+        </div>
+        <div class="tl-node">
+          <div class="tl-circle">2</div>
+        </div>
+        <div style="width:calc(50% - 40px)"></div>
+      </div>
+
+      <!-- Item 3 – LEFT -->
+      <div class="timeline-item left">
+        <div class="tl-card">
+          <span class="year-badge">2023</span>
+          <h3>International Shipping</h3>
+          <p>Started shipping globally, bringing ShopEase to customers around the world.</p>
+        </div>
+        <div class="tl-node">
+          <div class="tl-circle">3</div>
+        </div>
+        <!-- <div style="width:calc(50% - 40px)"></div> -->
+      </div>
+
+      <!-- Item 4 – RIGHT -->
+      <div class="timeline-item right">
+        <div class="tl-card">
+          <span class="year-badge">2024</span>
+          <h3>Eco-Friendly Initiative</h3>
+          <p>Launched sustainable packaging and partnered with eco-conscious brands.</p>
+        </div>
+        <div class="tl-node">
+          <div class="tl-circle">4</div>
+        </div>
+        <div style="width:calc(50% - 40px)"></div>
+      </div>
+
+    </div><!-- /timeline -->
+  </section>
+</journey-section>
+
+</body>
+</html>

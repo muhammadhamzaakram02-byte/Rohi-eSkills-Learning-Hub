@@ -1,0 +1,91 @@
+.box {
+    height: 700px;
+    width: 90vw;
+    border: 2px solid;
+    /* padding: 40px; */
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.bar {
+    width: 90%;
+    height: 150px;
+    border: 2px solid;
+    position: relative;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.bar1 {
+    height: 40px;
+    width: 100px;
+    background-color: lightblue;
+    border: 1px solid;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+}
+
+.bar2 {
+    height: 40px;
+    width: 100px;
+    background-color: rgb(233, 25, 237);
+    border: 1px solid;
+    position: absolute;
+    right: 150px;
+    top: 20px;
+}
+
+.circle {
+    height: 600px;
+    width: 600px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: relative;
+    animation: move-on 5s linear infinite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.circle-all {
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 1px black;
+    border-radius: 50%;
+}
+
+.circle1 {
+    position: absolute;
+    top: 245px;
+    left: -32px;
+}
+.circle2 {
+    position: absolute;
+    top: 245px;
+    right: -32px;
+}
+.circle3 {
+    position: absolute;
+    top: 245px;
+    left: 270px;
+}
+img{
+    width: 70px;
+    height: 70px;
+}
+@keyframes move-on {
+    0%{
+
+    }
+    10%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <title>Home</title>
+</head>
+<!--  -->
+
+<body>
+  <!-- ======== navbar ======= -->
+  <nav>
+
+    <a href="#" class="nav-logo">
+      <i class="fa-solid fa-cube text-3xl text-blue-600"></i>
+      Shop Ease
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="nav-search">
+        <i class="fas fa-search"></i>
+      </div>
+
+      <button class="cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">3</span>
+      </button>
+
+      <a style="color: black;" href="login.html">
+        <span>
+          <i class="fa-solid fa-user"></i>
+        </span>
+      </a>
+
+
+
+      <!-- javascript under  -->
+      <!-- <button class="hamburger" onclick="toggleMenu()"> -->
+      <!-- <span></span><span></span><span></span> -->
+      </button>
+    </div>
+  </nav>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to <em>ShopEase</em></h1>
+      <p>Discover amazing products at unbeatable prices</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary"> Shop Now</a>
+        <a href="#featured" class="btn-outline"> Explore More</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- =============== why choose us start =================== -->
+  <!-- WHY CHOOSE US -->
+  <section class="features">
+    <div class="section-header">
+      <h2>Why Choose Us</h2>
+      <!-- <div class="section-line"></div> -->
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-truck"></i></div>
+        <h3>Free Shipping</h3>
+        <p>On orders over $50</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-rotate-left"></i></div>
+        <h3>Easy Returns</h3>
+        <p>30-day return policy</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+        <h3>Secure Payment</h3>
+        <p>100% secure transactions</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3>24/7 Support</h3>
+        <p>Dedicated customer service</p>
+      </div>
+    </div>
+  </section>
+  <!-- =============== why choose us end =================== -->
+  <!-- =============== featured product =================== -->
+  <!-- FEATURED PRODUCTS -->
+  <section class="products-section" id="featured">
+    <div class="section-header">
+      <h2>Featured Products</h2>
+      <p>Discover our most popular items</p>
+
+    </div>
+    <div class="products-grid">
+
+      <!-- Card 1 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Headphones" />
+          <span class="product-badge badge-sale">Sale</span>
+          <button class="product-quick"></button>
+        </div>
+        <div class="product-info">
+          <h3>Premium Headphones</h3>
+          <div class="product-rating">
+            <div class="stars">
+
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+            </div>
+            <span class="rating-val">(4.5)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">$99.99</span>
+            <span class="price-old">$149.99</span>
+          </div>
+          <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Smart Watch" />
+          <span class="product-badge badge-new">New</span>
+          <button class="product-quick"></button>
+        </div>
+        <div class="product-info">
+          <h3>Smart Watch</h3>
+          <div class="product-rating">
+            <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <span class="rating-val">(4.0)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">$199.99</span>
+          </div>
+          <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Running Shoes" />
+          <button class="product-quick"></button>
+        </div>
+        <div class="product-info">
+          <h3>Running Shoes</h3>
+          <div class="product-rating">
+            <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <span class="rating-val">(5.0)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">$79.99</span>
+            <span class="price-old">$129.99</span>
+          </div>
+          <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Leather Bag" />
+          <span class="product-badge badge-pct">-30%</span>
+          <button class="product-quick"></button>
+        </div>
+        <div class="product-info">
+          <h3>Leather Bag</h3>
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <iclass="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <span class="rating-val">(4.0)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">$69.99</span>
+            <span class="price-old">$99.99</span>
+          </div>
+          <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="view-all-wrap">
+      <a href="#" class="btn-dark"><i class="fas fa-grid-2"></i> View All Products</a>
+    </div>
+  </section>
+  <!-- =============== featured product =================== -->
+  <!-- =====================categories start ========================= -->
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="categories-inner">
+      <div class="section-header">
+        <h2>Shop by Category</h2>
+        <p>Find exactly what you're looking for</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Fashion" />
+          <div class="cat-overlay">
+            <h3>Fashion</h3>
+            <span>50+ items</span>
+            <a href="#" class="cat-btn">Shop Now</a>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Electronics" />
+          <div class="cat-overlay">
+            <h3>Electronics</h3>
+            <span>30+ items</span>
+            <a href="#" class="cat-btn">Shop Now </a>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Home & Living" />
+          <div class="cat-overlay">
+            <h3>Home & Living</h3>
+            <span>40+ items</span>
+            <a href="#" class="cat-btn">Shop Now </a>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img
+            src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+            alt="Sports" />
+          <div class="cat-overlay">
+            <h3>Sports</h3>
+            <span>25+ items</span>
+            <a href="#" class="cat-btn">Shop Now </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =====================categories end ========================= -->
+  <!-- =======================sale banner =========================== -->
+  <!-- SALE BANNER -->
+  <section class="sale-banner">
+    <h2>Special Summer Sale!</h2>
+    <p>Get up to 50% off on selected items</p>
+    <div class="countdown">
+      <div class="countdown-box">
+        <span class="countdown-num" id="days">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="hours">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="minutes">00</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="seconds">00</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+    <a href="#" class="btn-gold"> Shop the Sale</a>
+  </section>
+  <!-- =======================sale banner end  =========================== -->
+
+  <!-- =====================testimonial ======================== -->
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="testi-inner">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from real customers</p>
+        <div class="section-line"></div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-author">
+            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Sarah" />
+            <div>
+              <div class="testi-name">Sarah Johnson</div>
+              <div class="testi-stars"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i
+                  class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i></div>
+            </div>
+          </div>
+          <p class="testi-text">"Amazing quality products and fast shipping! Will definitely shop again."</p>
+        </div>
+        <div class="testi-card">
+          <div class="testi-author">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Michael" />
+            <div>
+              <div class="testi-name">Michael Chen</div>
+              <div class="testi-stars"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i
+                  class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i></div>
+
+            </div>
+          </div>
+          <p class="testi-text">"Great customer service and the products exceeded my expectations."</p>
+        </div>
+        <div class="testi-card">
+          <div class="testi-author">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Emily" />
+            <div>
+              <div class="testi-name">Emily Davis</div>
+              <div class="testi-stars"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i
+                  class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i><i class="fa-solid fa-star"
+                  style="color: rgb(255, 212, 59);"></i></div>
+            </div>
+          </div>
+          <p class="testi-text">"Love the variety of products and the easy return policy. Highly recommended!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =====================testimonial end  ======================== -->
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter-box">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Get the latest updates on new products and upcoming sales</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email address…" />
+        <button>Subscribe </button>
+      </div>
+    </div>
+  </section>
+  <!-- ====================footer ======================== -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><i class="fa-solid fa-cube text-3xl text-blue-600"></i>ShopEase</a>
+        <p>Your one-stop shop for all your needs. Quality products, amazing prices, delivered with care.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#"> About Us</a></li>
+          <li><a href="#"> Contact</a></li>
+          <li><a href="#"> FAQs</a></li>
+          <li><a href="#"> Shipping Info</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#"> My Account</a></li>
+          <li><a href="#"> Order Tracking</a></li>
+          <li><a href="#"> Wishlist</a></li>
+          <li><a href="#"> Returns</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="contact-item"><i class="fas fa-location-dot"></i> 123 Commerce St, New York, NY 10001</div>
+        <div class="contact-item"><i class="fas fa-phone"></i> +1 (555) 123-4567</div>
+        <div class="contact-item"><i class="fas fa-envelope"></i> info@shopease.com</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 ShopEase. All rights reserved.</span>
+
+    </div>
+  </footer>
+  <!-- ====================footer end======================== -->
+  <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

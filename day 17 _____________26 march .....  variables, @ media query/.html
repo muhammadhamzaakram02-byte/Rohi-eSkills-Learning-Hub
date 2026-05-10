@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --my-variable: red;
+            --margin-from-left-side: 40px;
+            --greeeen: green;
+            --a2-margin: 20px;
+            --d:flex;
+            --j-c:center;
+            --a-i:center;
+        }
+
+        .a1 {
+            width: 200px;
+            height: 200px;
+            background-color: var(--my-variable);
+            margin: var(--margin-from-left-side);
+            padding: var(--margin-from-left-side);
+        }
+
+        .a2 {
+            width: 300px;
+            height: 300px;
+            border: 10px solid var(--greeeen);
+            padding: var(--a2-margin);
+            display: var(--d);
+            justify-content: var(--j-c);
+            align-items: var(--j-c);
+            /* align-items: var(--a-i); */
+
+        }
+        @media  screen and  (max-width:500px) {
+            .a2{
+                background-color:green; 
+            }
+            
+        }
+        @media  (min-width:1900px) {
+            .a2{
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a1">hhhhhhhhhhhf</div>
+    <div class="a2">djjjjjjjjjjjjjj</div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <input type="number" id="value1" placeholder="first number ">
+        <input type="number" id="value2" placeholder="second number ">
+        <button id="submit"> submit</button>
+        <h3>result</h3>
+        <h3 id="result">0</h3>
+    </div>
+    <script>
+        let value1 , value2 , result , submit , sum ;
+        submit = document.getElementById('submit')
+        submit.addEventListener('click' , function(){
+          
+            value1 = document.getElementById('value1').value
+            value2 = document.getElementById('value2').value
+            result = document.getElementById('result')
+              if(value1 == ''   || value2 == ''){
+                alert('both values are required ')
+                return ; 
+            }
+            sum = Number(value1)+Number(value2)
+            result.textContent = sum ;
+            console.log(value1 + value2)
+        
+        })
+
+
+    </script>
+</body>
+</html>

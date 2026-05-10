@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Products</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+<!--  -->
+
+<body>
+    <!-- ======== navbar ======= -->
+    <nav>
+
+        <a href="#" class="nav-logo">
+            <i class="fa-solid fa-cube text-3xl text-blue-600"></i>
+            Shop Ease
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="nav-search">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">3</span>
+            </button>
+            <a style="color: black;" href="login.html">
+                <span>
+                    <i class="fa-solid fa-user"></i>
+                </span>
+            </a>
+
+
+            <!-- javascript under  -->
+            <!-- <button class="hamburger" onclick="toggleMenu()"> -->
+            <!-- <span></span><span></span><span></span> -->
+            </button>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our Products </h1>
+            <p>Discover the latest trends and timeless classics. Quality you can trust.</p>
+
+        </div>
+
+    </section>
+    <!-- ============================= product bar ======================================== -->
+    <div class="product-bar">
+        <div class="product-bar-part-1">
+            <span>All</span>
+            <span>Electronics</span>
+            <span>Fashion</span>
+            <span>Home & Living </span>
+            <span>Sports</span>
+        </div>
+        <div class="product-bar-part-2">
+            <label for="">Sort by : </label>
+            <select name="" id="">
+                <option value="">Papularity</option>
+                <option value="">Price : Low to High </option>
+                <option value="">Price : High to Low </option>
+                <option value="">Newest</option>
+            </select>
+        </div>
+    </div>
+ <!-- ============================= product bar ======================================== -->
+
+    <!-- =============== featured product =================== -->
+    <!-- FEATURED PRODUCTS -->
+    <section class="products-section" id="featured">
+        <div style="text-align: start;" class="section-header">
+            <!-- <h2>Featured Products</h2> -->
+            <p>Showing <strong>12</strong> products </p>
+        </div>
+
+        <div class="products-grid">
+
+            <!-- Card 1 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Headphones" />
+                    <span class="product-badge badge-sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3>Premium Headphones</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <span class="rating-val">(4.5)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$99.99</span>
+                        <span class="price-old">$149.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- Card 1 + 1  -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Headphones" />
+                    <span class="product-badge badge-sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3>Premium Headphones</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <span class="rating-val">(4.5)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$99.99</span>
+                        <span class="price-old">$149.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Smart Watch" />
+                    <span class="product-badge badge-new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watch</h3>
+                    <div class="product-rating">
+                        <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-val">(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$199.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- Card 2 + 2 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Smart Watch" />
+                    <span class="product-badge badge-new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watch</h3>
+                    <div class="product-rating">
+                        <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-val">(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$199.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Running Shoes" />
+                </div>
+                <div class="product-info">
+                    <h3>Running Shoes</h3>
+                    <div class="product-rating">
+                        <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-val">(5.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$79.99</span>
+                        <span class="price-old">$129.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- Card 3 + 3 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Running Shoes" />
+                </div>
+                <div class="product-info">
+                    <h3>Running Shoes</h3>
+                    <div class="product-rating">
+                        <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-val">(5.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$79.99</span>
+                        <span class="price-old">$129.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Leather Bag" />
+                    <span class="product-badge badge-pct">-30%</span>
+                </div>
+                <div class="product-info">
+                    <h3>Leather Bag</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <iclass="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-val">(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$69.99</span>
+                        <span class="price-old">$99.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- Card 4 + 4  -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1600086827875-a63b01f1335c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Leather Bag" />
+                    <span class="product-badge badge-pct">-30%</span>
+                </div>
+                <div class="product-info">
+                    <h3>Leather Bag</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <iclass="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-val">(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$69.99</span>
+                        <span class="price-old">$99.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- Card 1 sec -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Headphones" />
+                    <span class="product-badge badge-sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3>Premium Headphones</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                        </div>
+                        <span class="rating-val">(4.5)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$99.99</span>
+                        <span class="price-old">$149.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 2 sec-->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Smart Watch" />
+                    <span class="product-badge badge-new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watch</h3>
+                    <div class="product-rating">
+                        <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-val">(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$199.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 3 sec-->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Running Shoes" />
+                </div>
+                <div class="product-info">
+                    <h3>Running Shoes</h3>
+                    <div class="product-rating">
+                        <div class="stars"> <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-val">(5.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$79.99</span>
+                        <span class="price-old">$129.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 4 sec -->
+            <div class="product-card">
+                <div class="product-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Leather Bag" />
+                    <span class="product-badge badge-pct">-30%</span>
+                </div>
+                <div class="product-info">
+                    <h3>Leather Bag</h3>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <iclass="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-val">(4.0)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$69.99</span>
+                        <span class="price-old">$99.99</span>
+                    </div>
+                    <button class="add-cart-btn"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="view-all-wrap circles">
+            <a class="btn-dark cir">1</a>
+            <a class="btn-dark cir">2</a>
+            <a class="btn-dark cir">3</a>
+            <a class="btn-dark cir">4</a>
+            <a href="#" class="btn-dark cir"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+    </section>
+    <!-- =============== featured product =================== -->
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-box">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates on new products and upcoming sales</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address…" />
+                <button>Subscribe </button>
+            </div>
+        </div>
+    </section>
+    <!-- ====================footer ======================== -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo"><i
+                        class="fa-solid fa-cube text-3xl text-blue-600"></i>Shop<span>Ease</span></a>
+                <p>Your one-stop shop for all your needs. Quality products, amazing prices, delivered with care.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#"> About Us</a></li>
+                    <li><a href="#"> Contact</a></li>
+                    <li><a href="#"> FAQs</a></li>
+                    <li><a href="#"> Shipping Info</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#"> My Account</a></li>
+                    <li><a href="#"> Order Tracking</a></li>
+                    <li><a href="#"> Wishlist</a></li>
+                    <li><a href="#"> Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <div class="contact-item"><i class="fas fa-location-dot"></i> 123 Commerce St, New York, NY 10001</div>
+                <div class="contact-item"><i class="fas fa-phone"></i> +1 (555) 123-4567</div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> info@shopease.com</div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2024 ShopEase. All rights reserved.</span>
+
+        </div>
+    </footer>
+    <!-- ====================footer end======================== -->
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            font-family: system-ui;
+        }
+
+        body {
+            background-color: rgb(224, 218, 218);
+            display: flex;
+            justify-content: center;
+            /* height: 100vh; */
+            height: 700px;
+            align-items: center;
+        }
+
+        .login-form {
+            background-color: white;
+            display: flex;
+            /* padding-left: 20px; */
+            border-radius: 20px;
+            /* width: 50vw; */
+            width: 700px;
+            height: auto;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        .register {
+            /* line-height: 55px; */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            width: 50%;
+            /* padding: 20px; */
+            /* justify-content: center; */
+        }
+
+        .name {
+            border: 1px solid;
+            border-radius: 10px;
+            padding: 10px 0px 10px 10px;
+            /* width: 210px; */
+            width: 80%;
+            background-color: rgb(213, 220, 225);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .input {
+            border: none;
+            background-color: rgb(213, 220, 225);
+            /* padding: 10px; */
+        }
+
+        .input:focus {
+            outline: none;
+        }
+
+        .icon-logo {
+            font-size: 25px;
+        }
+
+        .reg {
+            background-color: rgb(104, 104, 236);
+            width: 83%;
+            /* width: 220px; */
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .other {
+            font-size: 13px;
+        }
+
+        .login {
+            background-color: rgb(104, 104, 236);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            border-radius: 120px 20px 20px 120px;
+            line-height: 20px;
+        }
+
+        .login-button {
+            border: 2px solid white;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: rgb(104, 104, 236);
+            border: none;
+        }
+
+        .text-color {
+            color: white;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        .icon {
+            border: 1px solid;
+            height: 30px;
+            width: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <div class="register">
+            <h1>Registration</h1>
+
+            <div class="name"><input class="input " type="text" placeholder="user name"> <span> 
+                    <i class="  ri-user-line icon-logo "></i></span> </div>
+            <div class=" name"><input class="input " type="text" placeholder="Email">
+                        <span><i class="ri-mail-line icon-logo"></i></span> </div>
+            <div class=" name"><input class="input " type="text"
+                                    placeholder="Password"><span>
+                                        <i class="ri-git-repository-private-line icon-logo "></i></span></div>
+            <div class=" reg text-color">Register </div>
+            <div class="other">or register with social platforms </div>
+            <div class="icons">
+                <div class="icon"><i class="icon-logo ri-google-line"></i></div>
+                <div class="icon"><i class="icon-logo ri-facebook-line"></i></div>
+                <div class="icon"><i class="icon-logo ri-github-fill"></i></div>
+                <div class="icon"><i class="icon-logo ri-linkedin-line"></i></div>
+            </div>
+        </div>
+        <div class="login">
+            <h1 class="text-color">Welcome Back ! </h1>
+            <div class="text-color">Already have an account ?</div>
+            <div class="login-button"><button class="text-color">Login</button></div>
+        </div>
+    </div>
+</body>
+
+</html>

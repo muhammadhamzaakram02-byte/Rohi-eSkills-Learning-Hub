@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box , .box2 {
+            height: 30px;
+            width: 30px;
+            border: 2px solid red ;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+    <script>
+       let box = document.getElementsByClassName('box')
+        box[0].style.backgroundColor = 'red' ;
+        box[2].style.backgroundColor = 'red' ;
+        // is wrong okay 
+    //     box1[0].style.backgroundColor = 'red';
+    //     box[0].style.hight= '100px'
+    //     box1[1].style.backgroundColor = 'green';
+    //     box1[2].style.backgroundColor = 'blue';
+        // let box2 = document.querySelectorAll('.box , .box2 ').forEach( a => {
+            // a.style.backgroundColor = 'green'
+            // a.style.margin = '10px'
+            // a.style.padding = '20px'
+        // })
+
+         
+    </script>
+</body>
+</html>

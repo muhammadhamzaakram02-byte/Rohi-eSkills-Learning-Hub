@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Business Connect | Contact & Hours</title>
+  <!-- Tailwind CSS v3 + basic reset (20% Tailwind usage) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS (80% of styling) + additional modern refinements -->
+  <style>
+    /* ------------------------------------------
+       80% CUSTOM CSS (extensive, detailed, responsive)
+       rich interactions, gradients, glassmorphism,
+       custom animations, business card styling
+    ------------------------------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+      background: linear-gradient(145deg, #e9eef3 0%, #d4dee9 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+    }
+
+    /* subtle animated background grain / pattern */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(0,0,0,0.02) 1.5px, transparent 1.5px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* main card container — glassmorphic elegance */
+    .business-hub {
+      max-width: 1280px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 2.5rem;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    /* responsive grid: left info (business hours + details) + right form */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 0;
+    }
+
+    /* left panel — rich with business identity */
+    .info-panel {
+      background: linear-gradient(135deg, #0b2b3f 0%, #123e54 100%);
+      padding: 2.2rem 2rem;
+      color: #f0f6fa;
+      border-radius: 0 0 0 0;
+      transition: all 0.2s;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 8px 0 18px -8px rgba(0,0,0,0.2);
+    }
+
+    /* right panel — form area with soft white */
+    .form-panel {
+      background: #ffffff;
+      padding: 2.2rem 2rem;
+      transition: all 0.2s;
+    }
+
+    /* business name + badge */
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,255,240,0.15);
+      backdrop-filter: blur(4px);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin-bottom: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.3);
+    }
+
+    .business-name {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.3px;
+      background: linear-gradient(120deg, #FFF, #c0e0ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .address-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 1rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #d4e6f2;
+      border-left: 3px solid #5bc0ff;
+      padding-left: 0.8rem;
+    }
+
+    .divider-custom {
+      height: 2px;
+      background: rgba(255,255,255,0.2);
+      margin: 1.8rem 0 1.5rem 0;
+      width: 60px;
+      border-radius: 4px;
+    }
+
+    /* hours list design */
+    .hours-list {
+      margin-top: 1rem;
+    }
+
+    .hour-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.7rem 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.15);
+      font-size: 1rem;
+    }
+
+    .day {
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .time {
+      font-weight: 400;
+      background: rgba(0,0,0,0.2);
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .closed-badge {
+      background: rgba(220, 80, 70, 0.7);
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .live-chat-bubble {
+      margin-top: 2rem;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.7rem 1.3rem;
+      backdrop-filter: blur(4px);
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,200,0.4);
+    }
+
+    /* email contact row */
+    .email-contact {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.7rem 1rem;
+      border-radius: 50px;
+      width: fit-content;
+    }
+
+    /* right side form styling */
+    .form-header {
+      margin-bottom: 1.8rem;
+    }
+
+    .form-header h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f2f3f;
+      letter-spacing: -0.2px;
+    }
+
+    .form-header p {
+      color: #4a6272;
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.4rem;
+    }
+
+    .input-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2c5a6e;
+      margin-bottom: 0.5rem;
+    }
+
+    .custom-input, .custom-textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #f9fbfd;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .custom-input:focus, .custom-textarea:focus {
+      border-color: #2c7da0;
+      box-shadow: 0 0 0 3px rgba(44,125,160,0.2);
+      background: white;
+    }
+
+    .custom-textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .btn-send {
+      background: linear-gradient(95deg, #1b5e7a, #0e3e52);
+      border: none;
+      padding: 0.9rem 1.8rem;
+      width: 100%;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.25s;
+      margin-top: 0.5rem;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-send:hover {
+      background: linear-gradient(95deg, #0e4a62, #083141);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -10px rgba(0,0,0,0.2);
+    }
+
+    /* toast notification (custom js feedback) */
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
+      background: #1e2f3c;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      backdrop-filter: blur(12px);
+      background: rgba(15, 45, 60, 0.95);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+
+    /* responsiveness: 80% CSS driven */
+    @media (max-width: 900px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+      .info-panel {
+        border-radius: 2.5rem 2.5rem 0 0;
+      }
+      .form-panel {
+        border-radius: 0 0 2.5rem 2.5rem;
+      }
+      .business-name {
+        font-size: 1.8rem;
+      }
+      .hour-item {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 550px) {
+      body {
+        padding: 1rem;
+      }
+      .info-panel, .form-panel {
+        padding: 1.5rem;
+      }
+      .business-name {
+        font-size: 1.6rem;
+      }
+      .btn-send {
+        padding: 0.75rem;
+      }
+      .live-chat-bubble {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    /* hover micro-interactions */
+    .hour-item:hover {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      transition: 0.1s;
+      padding-left: 8px;
+    }
+
+    /* custom scroll */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e2e8f0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2c7da0;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="business-hub">
+  <div class="dashboard-grid">
+    <!-- LEFT PANEL: Business Hours & Contact Info (John Doe details) -->
+    <div class="info-panel">
+      <div class="brand-badge">
+        ⭐ Established Excellence
+      </div>
+      <div class="business-name">
+        John Doe<br>Associates
+      </div>
+      <div class="address-detail">
+        <span>📍</span> 123 Commerce St, New York, NY 10001
+      </div>
+      <div class="email-contact">
+        <span>✉️</span> john@example.com
+      </div>
+      
+      <div class="divider-custom"></div>
+      
+      <div style="font-weight: 600; letter-spacing: 0.5px; font-size: 0.9rem; margin-bottom: 0.75rem;">📆 BUSINESS HOURS</div>
+      <div class="hours-list">
+        <!-- Monday - Friday -->
+        <div class="hour-item">
+          <span class="day">Monday - Friday</span>
+          <span class="time">9:00 AM - 6:00 PM</span>
+        </div>
+        <!-- Saturday -->
+        <div class="hour-item">
+          <span class="day">Saturday</span>
+          <span class="time">10:00 AM - 4:00 PM</span>
+        </div>
+        <!-- Sunday -->
+        <div class="hour-item">
+          <span class="day">Sunday</span>
+          <span class="closed-badge">Closed</span>
+        </div>
+      </div>
+
+      <!-- 24/7 Live Chat Available feature -->
+      <div class="live-chat-bubble">
+        <span>💬</span> 24/7 Live Chat Available
+        <span style="font-size: 12px; background: #2ba14b; border-radius: 20px; padding: 2px 8px;">online</span>
+      </div>
+      <div style="margin-top: 1.2rem; font-size: 0.75rem; opacity: 0.7;">
+        <span>🕒 After-hours? Our chat bot is ready 24/7</span>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: Message form "How can we help?" -->
+    <div class="form-panel">
+      <div class="form-header">
+        <h3>How can we help?</h3>
+        <p>Send a message — we’ll reply within 2 hours during business days.</p>
+      </div>
+
+      <form id="contactForm" action="#" method="POST">
+        <div class="input-group">
+          <label class="input-label" for="name">Full name</label>
+          <input type="text" id="name" name="name" class="custom-input" placeholder="John Carter" required>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="email">Email address</label>
+          <input type="email" id="email" name="email" class="custom-input" placeholder="hello@example.com" required>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="message">Write your message here...</label>
+          <textarea id="message" name="message" class="custom-textarea" placeholder="I have a question about your services, business hours, or just want to get in touch..."></textarea>
+        </div>
+        <button type="submit" class="btn-send">
+          <span>📨</span> Send Message
+        </button>
+      </form>
+      <div style="margin-top: 1.2rem; text-align: center; font-size: 0.7rem; color: #7e95a3;">
+        * We respect your privacy. Your info stays confidential.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast notification element for form feedback -->
+<div id="liveToast" class="toast-msg">✨ Message sent successfully! We'll get back soon.</div>
+
+<!-- tiny vanilla JS for form handling + live chat simulation (non-intrusive) -->
+<script>
+  (function() {
+    const form = document.getElementById('contactForm');
+    const toastEl = document.getElementById('liveToast');
+    
+    function showToast(message, isError = false) {
+      if (toastEl) {
+        toastEl.textContent = message || (isError ? "⚠️ Oops! Something went wrong." : "✨ Message sent successfully! We'll get back soon.");
+        if(isError) {
+          toastEl.style.background = "rgba(180, 60, 50, 0.95)";
+        } else {
+          toastEl.style.background = "rgba(15, 45, 60, 0.95)";
+        }
+        toastEl.classList.add('show');
+        setTimeout(() => {
+          toastEl.classList.remove('show');
+          // reset background after hiding
+          setTimeout(() => {
+            if(!isError) toastEl.style.background = "rgba(15, 45, 60, 0.95)";
+            else toastEl.style.background = "rgba(15, 45, 60, 0.95)";
+          }, 300);
+        }, 2800);
+      }
+    }
+
+    // simple validation + prevent page reload (simulate sending)
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+      
+      let isValid = true;
+      // basic validation
+      if (!nameInput.value.trim()) {
+        showToast("❌ Please enter your name.", true);
+        nameInput.focus();
+        return;
+      }
+      const emailVal = emailInput.value.trim();
+      const emailPattern = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+      if (!emailVal || !emailPattern.test(emailVal)) {
+        showToast("📧 Please provide a valid email address.", true);
+        emailInput.focus();
+        return;
+      }
+      if (!messageInput.value.trim()) {
+        showToast("✏️ Message cannot be empty. Write your inquiry.", true);
+        messageInput.focus();
+        return;
+      }
+      
+      // If all fields valid → simulate successful send (show success toast)
+      // We can also log to console but not required, but mimic live interaction
+      console.log("📨 Message from:", nameInput.value, "| email:", emailVal, "| message:", messageInput.value);
+      showToast("✅ Message delivered! John Doe team will reply shortly.", false);
+      
+      // optional: clear form fields after submit? (better UX? we'll leave as is or reset optionally)
+      // we won't clear to let user see but can provide a small reset? but we do nothing drastic
+      // but to improve UX, we can keep fields, maybe just reset message? but no, client expects to see.
+      // optionally we can disable submit for a second but not needed
+      form.reset();   // optionally clears all fields after success, feels more polished.
+      // but we add a subtle feedback: after reset, name input gets focus
+      nameInput.focus();
+    });
+    
+    // optional: extra live chat badge interactive (just for fun, triggers fake chat info)
+    const chatBadge = document.querySelector('.live-chat-bubble');
+    if(chatBadge) {
+      chatBadge.style.cursor = 'pointer';
+      chatBadge.addEventListener('click', () => {
+        showToast("💬 Live chat is available 24/7. Connect with an agent instantly!", false);
+      });
+    }
+    
+    // Also business hours and interactive hover already done via CSS
+    // Add micro interaction for email copy simulation? not needed but cute
+    const emailContactDiv = document.querySelector('.email-contact');
+    if(emailContactDiv) {
+      emailContactDiv.style.cursor = 'pointer';
+      emailContactDiv.addEventListener('click', () => {
+        navigator.clipboard.writeText('john@example.com').then(() => {
+          showToast("📋 Email address copied to clipboard: john@example.com", false);
+        }).catch(() => {
+          showToast("Could not copy manually, but email is john@example.com", false);
+        });
+      });
+      emailContactDiv.title = "Click to copy email address";
+    }
+  })();
+</script>
+</body>
+</html>

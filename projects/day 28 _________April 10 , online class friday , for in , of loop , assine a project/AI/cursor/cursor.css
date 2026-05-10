@@ -1,0 +1,116 @@
+/* Minimal "Tailwind-like" helpers used in cursor.html */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.py-20 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.max-w-7xl {
+  max-width: 1280px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Main component styles (custom CSS) */
+.why-choose__header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.why-choose__title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0213ff;
+  letter-spacing: -0.02em;
+}
+
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-choose__card {
+  text-align: center;
+  padding: 36px 24px;
+  border-radius: 16px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-choose__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.why-choose__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.5rem;
+  background: #e5e7eb;
+  color: #0213ff;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.why-choose__card:hover .why-choose__icon {
+  background: #0213ff;
+  color: #fff;
+}
+
+.why-choose__cardTitle {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.why-choose__cardText {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .why-choose__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
