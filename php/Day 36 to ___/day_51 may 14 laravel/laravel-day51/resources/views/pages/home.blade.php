@@ -222,7 +222,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="products.html" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <a href="product" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     View All Products
                 </a>
             </div>
